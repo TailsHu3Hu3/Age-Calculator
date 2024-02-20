@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: hsl(259, 100%, 65%);
+    --secondaryColor: hsl(158.37deg 74.59% 54.1%);
+    --thirdColor: hsl(0, 0%, 8%);
+    --errorColor: hsl(0, 100%, 67%);
+    --background: hsl(0, 0%, 86%);
+    --labelText: hsl(0, 1%, 44%);
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/**************************
+*           BOX           *
+**************************/
+
+main {
+    text-align: center;
+    background-color: white;
+    padding: 40px 40px;
+    border-radius: 15px;
+    border-bottom-right-radius: 25%;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 450px;
+    justify-content: space-between;
+}
+
+.formClass {
+    display: flex;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: var(--labelText);
+    padding-bottom: 25px;
+}
+
+.spanInputD, .spanInputM, .spanInputY {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--labelText);
+}
+
+
+#dayId, #monthId, #yearId {
+    width: 120px;
+    text-align: left;
+    height: 50px;
+    padding-left: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: gray;
+}
+#yearId {
+    margin-right: 65px;
+}
+
+
+.buttonClass {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border-style: none;
+    position: relative;
+    top: -35px;
+    left: 210px;
+    background-color: var(--primaryColor);
+}
+
+.buttonClass img {
+    width: 40px;
+}
+
+/**************************
+*         RESULTS         *
+**************************/
+
+.results {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: left;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 80px;
+    letter-spacing: -2px;
+}
+
+
+.yearsSpan, .monthsSpan, .daysSpan {
+    color: var(--primaryColor);
+}
+
+/**************************
+*         FOOTER          *
+**************************/
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--labelText);
+}
+
+a:last-of-type {
+    color: #3c065e;
+}
+
+/**************************
+*         HOVERS          *
+**************************/
+
+#dayId:hover, #monthId:hover, #yearId:hover {
+    border-color: var(--primaryColor);
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+.buttonClass:hover {
+    background-color: var(--thirdColor);
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--primaryColor);
+    transition-duration: 400ms;
+}
+
+a:last-of-type:hover {
+    color: #7805c0;
+    transition-duration: 400ms;
+}
+
+/**************************
+*       SPAN/ERRORS       *
+**************************/
+
+
+.hidden {
+    display: none;
+}
+
+.error {
+    display: block;
+    color: var(--errorColor);
+}
+
+.errorBorder {
+    border-width: 1px;
+    border-color: var(--errorColor) !important;
+}
+
+.spanFuture {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--secondaryColor);
+    height: 40px;
+}
+
+.borderFuture {
+    border-color: var(--secondaryColor) !important;
+}
+
+.colorFuture {
+    color: var(--secondaryColor);
+}
+
+/**************************
+*       SPAN/ERRORS       *
+**************************/
+
+@media (max-width: 650px) {
+    main {
+        padding: 40px 15px;
+    }
+
+    .inputWrapper {
+        width: 300px;
+    }
+
+    .formClass {
+        padding-bottom: 50px;
+    }
+
+    #yearId {
+        margin: 0;
+    }
+
+    .buttonClass {
+        top: -35px;
+        left: 0;
+    }
+
+    .results {
+        margin-top: -20px;
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    #dayId, #monthId, #yearId {
+        width: 80px;
+        text-align: center;
+        height: 50px;
+        font-weight: 600;
+        font-size: 20px;
+    } #monthId {
+        font-size: 10px;
+        font-weight: bolder;
+    }
+}
