@@ -111,6 +111,10 @@ function enviar(event){
         daysInput.classList.remove("errorBorder")
         daysInput.classList.add("borderFuture")
         yearsInput.classList.add("borderFuture")
+        spanDay.classList.remove("error")
+        spanDay.classList.add("hidden")
+        spanMonth.classList.remove("error")
+        spanMonth.classList.add("hidden")
         classDay.classList.add("colorFuture")
         classMonth.classList.add("colorFuture")
         classYear.classList.add("colorFuture")
@@ -134,40 +138,6 @@ function enviar(event){
         classMonth.classList.remove("colorFuture")
         classYear.classList.remove("colorFuture")
     }
-    console.log(dateFull)
-    console.log(getDaysInMonth(parseInt(monthsInput.value - 1), parseInt(yearsInput.value)))
 }   
 
 form.addEventListener('submit', enviar)
-console.log(results)
-console.log(daysInput.value)
-
-console.log(calcData("12-14-2005", data).result)
-console.log(calcData("12-14-2005", data).yearsPassed)
-
-/*for (let contador = 1; contador <= getDaysInMonth(parseInt(monthsInput.value - 1), parseInt(yearsInput.value)); contador++) {
-    dayHTML += `<option value="${contador}">${contador}</option>`
-    daysInput.innerHTML = dayHTML
-}*/
-
-/*
-for (let getMonth of months) {
-    monthHTML += `<option value="${months.length}">${getMonth}</option>`
-    monthsInput.innerHTML = monthHTML
-}
-*/
-
-/*
-for (let month = 1; month <= data.getMonth(); month++) {
-    monthHTML += `<option value="${month}">${month}</option>`
-    monthsInput.innerHTML = monthHTML
-}
-*/
-/*  let month = months[data.getMonth()]*/
-
-
-
-
-
-
-
